@@ -1,0 +1,164 @@
+useref
+usecallback
+usememo
+useeffect
+usestate:-every on single state change it will render full component
+
+ 
+<Fragment>, alternatively written as <>...</>, lets you group multiple JSX nodes together.
+<Profiler> lets you measure rendering performance of a React tree programmatically.
+<Suspense> lets you display a fallback while the child components are loading.
+<StrictMode> enables extra development-only checks that help you find bugs early.
+
+
+
+
+
+# error boundry compoent:- we rap the small chunk of code so it that spacific data did not come it will show message.
+
+
+# API
+createContext lets you define and provide context to the child components. Used with useContext.
+forwardRef lets your component expose a DOM node as a ref to the parent. Used with useRef.
+lazy lets you defer loading a component’s code until it’s rendered for the first time.
+memo lets your component skip re-renders with same props. Used with useMemo and useCallback.
+startTransition lets you mark a state update as non-urgent. Similar to useTransition.
+act lets you wrap renders and interactions in tests to ensure updates have processed before making assertions.
+
+
+#useFormState=> helps simplify form state management and improves the performance of your forms by tracking specific states efficiently 
+                it show {dispaly validation error ,fromSubmitStatus, Displays a message if the form has been modified from its initial state.}
+
+
+
+
+googleAuth2.o
+you should have {xyy.nibavelift.gmail.com} 
+google validate it and send token which have minimum data like {Gmail & Id} in encrypted way this we store in cookies
+in frontend and by API call we send this token to backend to get all needed information which is USER 
+Q why this api call is needed by sending googleToken?:-To show particular user profile on portal and show specific routs option on side-bar which is allowed based on its roles. 
+------------------------------------------------------
+USER:-this all code is in googleContext() in frontend
+email: "pradhumn.choubey@nibavlifts.com"
+employeeId: "8574"
+id:59
+image: "https://lh3.googleusercontent.com/a/ACg8ocKxLO2yzi1K_4hpkcFitEiOe1-B6jqu-n-nK2L8FiVymypuNQ=s96-c"
+name: "pradhumn choubey"
+roles: 
+[0: "technical-head"
+ 1: "production-head"
+ 2: "finance-head"
+]
+-----------------------------------------------------
+token is store in [local storage or session storage] in (Nibave-project we store on cookies) and with each api request we will send that token and in backend by[role-based-check] and based on DB roles we allow the authorized api response only not for all api.
+
+
+
+object         :-[ object is blue-print of class ] [ class is datatype and object is its value ] 
+class          :- [class is (sencha) or (datatype) and object is real value if it (entity)]
+inheritance    :- we can inherited from other class one class.
+polymorphism   :- based on object value working is change "one thing present in many from"
+encapsulation  :- reaping variable and method in class so that full project will seriated in proper way.
+abstraction    :- hiding business logic method and expose some method and props to interact use that class.
+
+
+
+# React
+diff in react.memo() and usememo 
+const memoizedValue = useMemo(() => expensiveCalculation(data), [data]);
+const MyComponent = React.memo((props) => { return <div>{props.value}</div>;});
+
+
+class
+object
+encaptulation  :- binding all values and method in one reper which is class or component
+abstraction :- hiding all methods have busnes logic and not want to access directly 
+inharitnace :- extend and implement by parent class and mothod also
+polimorpicam :- one thing present in different form animal class and dog class now we can create object [Animal a = new Dog();]
+
+normalization :- we have one big table to make it normalize
+1NF:-  make sure each row have only one value in full table 
+2NF:-  *1NF is satisfy 
+       *all non-key column is purtily depend on candidate key and splat them into serpent table.
+        and all non-key column is depend on candidate key like Table=[candidate key , non-key column].
+        (candidate key :- set of column	 which uniquely identify a record like Order_num or Product_code)  
+        (non-key column :- other column which is not candidate key are priment key mean not unique are non-key column)
+       *every Table=[candidate key , non-key column]. should have primary key and relation between the table should be formed using foreign key.
+        either by either one more column or creating serpent table for [relation table]. 
+3NF:-  *2NF is satisfy
+       *avoid transitive dependency
+       (transitive:- example you have one table in which [customer data(A)+ order data(B)+ sales persona data(C)] so if i know A you find B form B you find C and A    you find C so make "serpent all three table")
+
+BCNF
+
+
+
+
+
+
+# Monorepo & Polyrepo:
+* Monorepo:
+Best if your frontend and backend are closely related and frequently need to be deployed together.
+Easier for small to medium-sized projects where unified management is beneficial.
+If you want tight integration between frontend and backend, go with a monorepo.
+* Polyrepo:
+Ideal for larger teams, more scalable projects, or when frontend and backend evolve independently.
+Suitable for microservices-based architectures.
+If you need independent scalability and want to isolate responsibilities, go with separate repos.
+
+
+# diff in WebSockets and WebRTC and Webpack
+
+WebSockets:
+Think of it as a two-way street for real-time communication between a website and a server.
+It allows for instant, continuous data exchange without constant page refreshes.   
+Example: A live chat app where messages appear instantly as they're typed.
+
+WebRTC:
+This technology lets web browsers directly communicate with each other, enabling real-time audio, video, and data sharing.   
+No need for a middleman server, making it faster and more efficient.   
+Example: A video conferencing app like Zoom or Google Meet.   
+
+Webpack:
+It's like a superhero organizer for your web development projects.
+It bundles all your code and assets (like JavaScript, CSS, images) into a few efficient files.   
+
+
+---------------------------------------------------------------------------------
+# webSocket --> socket.io ---> webTranspoting -----> webRTC 
+# firebase --->apollo GraphQL ----> Pusher
+
+Real-time Example Comparing Both Groups:
+In your e-commerce app, you could use Group 1 (Firebase, Apollo GraphQL, Pusher) to manage things like:
+
+Storing user data (e.g., items in a shopping cart)
+Updating inventory in real-time (e.g., if a product is sold out, it reflects across all users instantly)
+Sending real-time notifications (e.g., notifying users about order status updates)
+You would use Group 2 (WebSocket, Socket.io, WebRTC) for:
+
+Live customer support (chat and video)
+Real-time order tracking updates (like a live map showing where a delivery is)
+Instant messaging between users or live interactions
+
+--------------------------------------------------------------------------------
+
+
+# ways to deployment your porject on server or updata new feacher on server and deployment.
+1. big bank deployment 
+2. rolling deployment
+3. blue-green deployment
+4. canary development
+5. feature toggle development
+
+
+
+# how to send pdf,image,video,audio from backend to frontend to download of play 
+# types of authorized and authrization
+# how we upload and download video by using S3 bucket.
+#  
+
+
+
+
+
+
