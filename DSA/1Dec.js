@@ -102,6 +102,84 @@ for(let i = 0 ;i<s2.length;i++)
 }
 console.log(result()?"is Anagram" : "is not Anagram");
 
+//-----------------------------------------------------
+// @ Find the First Non-Repeating Character
+let string = "opradhumm"
+let map = new  Map ();
+
+let kk = ()=>{
+let k ;
+for(let i = 0 ;i< string.length ;i++)
+{
+   if(map.has(string[i]))
+   {
+       map.set(string[i], map.get(string[i])+1);
+   }
+   else { map.set(string[i],1);}
+   if(map.get(string[i]) === 1)
+   {
+       k = string[i];
+       break;
+   }
+}
+ return k;
+}
+console.log(kk());
+
+
+
+// @  Longest Substring Without Repeating Characters
+
+// console.log(maxlengthArray);
+// console.log(mymap);
+let ss = "abcabcdd";
+let mymap = new Map();
+let maxlength = 0; 
+let currentLength = 0; 
+let maxlengthArray = []; 
+
+for (let count of ss) {
+  if (!mymap.has(count)) {
+    // This value is not present, so add it to the map
+    mymap.set(count, 1);
+    currentLength++;
+  } else {
+    // Store the current length in maxlengthArray before resetting
+    maxlengthArray.push(currentLength);
+    // Reset map and currentLength to handle new substring
+    mymap.clear();
+    mymap.set(count, 1);
+    currentLength = 1; // Restart counting from this character
+  }
+}
+
+// Push the last substring length (after loop)
+maxlengthArray.push(currentLength);
+
+// Find the maximum length
+maxlength = Math.max(...maxlengthArray);
+
+console.log("Lengths of substrings:", maxlengthArray,mymap); // All substring lengths
+console.log("Longest substring length:", maxlength); // Maximum length
+
+console.log("max length ", maxlength);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
