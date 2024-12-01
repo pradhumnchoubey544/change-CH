@@ -159,6 +159,23 @@ Instant messaging between users or live interactions
 
 
 
+### Types of server ### 
+Physical Servers: As explained, these are actual hardware machines used for computing and storage. You manage the server directly, either on-premises or in a data center.
+Virtual Servers: These are software-based servers running on physical hardware. A single physical server can host multiple virtual servers, each with its own operating system and resources.
+Cloud Servers: These are virtual servers hosted on a cloud provider's infrastructure (like AWS, Google Cloud, or Microsoft Azure). They can be scaled up or down based on demand and are usually managed remotely.
+Dedicated Servers: These are physical servers that are exclusively rented or used by one client. It’s similar to a physical server, but instead of owning it, you lease it from a hosting company.
+Shared Servers: This is a type of hosting where multiple clients share the resources of a single physical server. Each user gets a portion of the server’s capacity but doesn’t have full control over it.
+Hybrid Servers: These combine physical and virtual components, such as using both on-premise servers and cloud servers, often for balancing flexibility, cost, and performance.
+
+# what is server ??
+A physical server includes CPU, memory, hard drives, and networking components
+# what is server software ??
+server need some software for serving (web-server,Database,application) 
+ "Web Server Software": - Hosts the user-facing part of your app (website, UI) by (Apache, Nginx)
+ "Database Server Software": - Stores and retrieves data for your app (MySQL, PostgreSQL)
+ "Application Server Software" :-  Runs the logic of your app and handles user requests  & runs the business logic and connects frontend, backend, and databases (Node.js, Django) 
+
+
 
 
 
