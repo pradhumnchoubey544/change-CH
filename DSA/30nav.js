@@ -92,6 +92,12 @@ console.log(Array.from(map.keys()));
 //or
 console.log([...map.keys()]); 
 
+// another way of sorting  array
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
+}
+
+
 
 
 // @What is the difference between .filter() and .find()?
@@ -117,3 +123,5 @@ console.log(arr.filter((ele)=> ele !== targat)||arr.filter((ele)=>(ele !== targa
 
 
 // @What is the difference between .map() and .forEach()?
+
+
