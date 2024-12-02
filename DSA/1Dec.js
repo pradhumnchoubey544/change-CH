@@ -137,36 +137,25 @@ let mymap = new Map();
 let maxlength = 0; 
 let currentLength = 0; 
 let maxlengthArray = []; 
+let maxString = [];
 
 for (let count of ss) {
   if (!mymap.has(count)) {
-    // This value is not present, so add it to the map
     mymap.set(count, 1);
     currentLength++;
   } else {
-    // Store the current length in maxlengthArray before resetting
     maxlengthArray.push(currentLength);
-    // Reset map and currentLength to handle new substring
+    maxString.push(mymap.get(count));
+    console.log(mymap);
     mymap.clear();
-    mymap.set(count, 1);
-    currentLength = 1; // Restart counting from this character
+    currentLength = 0;
   }
 }
-
-// Push the last substring length (after loop)
-maxlengthArray.push(currentLength);
-
-// Find the maximum length
 maxlength = Math.max(...maxlengthArray);
-
-console.log("Lengths of substrings:", maxlengthArray,mymap); // All substring lengths
-console.log("Longest substring length:", maxlength); // Maximum length
-
+console.log("Lengths of substrings:", maxlengthArray,mymap); 
+console.log("Longest substring length:", maxlength); 
 console.log("max length ", maxlength);
-
-
-
-
+console.log("maxString", maxString);
 
 
 

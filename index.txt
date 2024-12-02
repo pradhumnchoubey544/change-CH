@@ -178,4 +178,13 @@ server need some software for serving (web-server,Database,application)
 
 
 
+# js code execution is not fixed based on code it will weary 
+ex : let arr  =  Array.from(map.entries()).filter(([key, value]) => value > 1).map(([key]) => key); // it is right to left.
+ex : let result = fn3(fn2(fn1(value))); // it is left to right.
+
+
+# use of Set :- this will remove dublicate and store unique values. 
+const set1 = new Set(arr1);
+
+
 
