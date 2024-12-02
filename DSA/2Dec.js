@@ -133,3 +133,22 @@ console.log(groupAnagrams(input));
 
 // @ Find the Intersection of Two Arrays(values come under both array).
 
+function ff(arr11,arr22)
+{
+    let set1 = new Set(arr11);
+    let set2 = new Set(arr22);
+    
+    let arr33 =[99,99];
+    
+    console.log( typeof arr33);
+    
+    arr33= set1;
+    
+    console.log( typeof arr33)
+    
+    
+    return  [...arr33].filter(ele=>set2.has(ele));
+}
+console.log(ff([1, 2, 2, 1,3,4,4,5], [2,2,3,4,5])); 
+
+
