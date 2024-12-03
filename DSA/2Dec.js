@@ -131,8 +131,34 @@ console.log(groupAnagrams(input));
 
 
 
-// @ Find the Intersection of Two Arrays(values come under both array).
 
+
+
+//@ Anagram cheack for this two string 
+function isAnagram(s1, s2) {
+    // If lengths are different, they can't be anagrams
+    if (s1.length !== s2.length) {
+      return false;
+    }
+  
+  console.log(s1.split('').sort().join(''));
+  console.log(s2.split('').sort().join(''));
+  
+    // Sort both strings and compare the results
+    return s1.split('').sort().join('') === s2.split('').sort().join('');
+    
+  }
+  
+  // Example usage:
+  console.log(isAnagram('listen', 'silent')); // Output: true
+  console.log(isAnagram('hello', 'world'));   // Output: false
+  
+
+
+
+
+
+// @ Find the Intersection of Two Arrays(values come under both array).
 function ff(arr11,arr22)
 {
     let set1 = new Set(arr11);
@@ -150,5 +176,17 @@ function ff(arr11,arr22)
     return  [...arr33].filter(ele=>set2.has(ele));
 }
 console.log(ff([1, 2, 2, 1,3,4,4,5], [2,2,3,4,5])); 
+
+
+
+// @  Reverse Words in a String
+let str = "the sky is blue"
+let revString = str.split('').reverse().join('');
+console.log(revString); // Output: "4321"
+
+
+
+
+
 
 
