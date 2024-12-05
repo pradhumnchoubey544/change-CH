@@ -4,6 +4,17 @@ usememo
 useeffect
 usestate:-every on single state change it will render full component
 
+
+###
+don't put {} in callback in any s method
+arr= arr.sort((a,b)=>a-b); correct 
+arr= arr.sort((a,b)=>{a-b}); incorrect
+
+
+## in Set you can not push you can "add" 
+ ex:- set.add(arr[i]);
+
+
  
 <Fragment>, alternatively written as <>...</>, lets you group multiple JSX nodes together.
 <Profiler> lets you measure rendering performance of a React tree programmatically.
@@ -261,6 +272,7 @@ Breaking the code into smaller chunks for faster loading.
 Security Best Practices:
 XSS (Cross-site scripting), CSRF (Cross-site request forgery) prevention.
 Avoiding eval() and handling untrusted data safely.
+
 6. Testing & Debugging:
 Unit Testing:
 Testing libraries (e.g., Jest, Mocha, Chai).
@@ -329,6 +341,7 @@ Longest Substring Without Repeating Characters:
 Given a string, find the longest substring without repeating characters.
 Anagram Checking:
 Check if two strings are anagrams of each other.
+
 2. Algorithms (Sorting and Searching)
 Sorting Algorithms:
 Implement sorting algorithms like QuickSort, MergeSort, BubbleSort, or InsertionSort.
@@ -337,6 +350,7 @@ Binary Search:
 Perform binary search on a sorted array.
 Merge Two Sorted Arrays:
 Merge two sorted arrays into one sorted array.
+
 3. Recursion and Backtracking
 Factorial Calculation:
 Compute the factorial of a number using recursion.
@@ -348,6 +362,7 @@ N-Queens Problem:
 Solve the N-Queens problem using backtracking.
 Depth-First Search (DFS) or Breadth-First Search (BFS):
 Implement DFS or BFS for traversing trees or graphs.
+
 4. Dynamic Programming
 Climbing Stairs Problem:
 Given n stairs, find the number of ways to reach the top if you can take either 1 or 2 steps at a time.
@@ -357,6 +372,7 @@ Knapsack Problem:
 Solve the 0/1 Knapsack problem using dynamic programming.
 Coin Change Problem:
 Find the minimum number of coins needed to make a target amount.
+
 5. Object-Oriented Programming (OOP)
 Classes and Inheritance:
 Understanding how to define and use classes, inheritance, and methods in JavaScript.
@@ -366,6 +382,7 @@ Singleton Pattern:
 Implement a singleton pattern in JavaScript.
 Factory Pattern:
 Implement a factory function for object creation.
+
 6. Asynchronous JavaScript
 Promises:
 Understanding and working with Promises. Use .then(), .catch(), and finally().
@@ -375,6 +392,7 @@ Callback Functions:
 Implement callback functions to handle asynchronous operations.
 Event Loop:
 Understand the event loop, microtasks, and macrotasks in JavaScript.
+
 7. JavaScript Data Structures
 Arrays, Stacks, and Queues:
 Implement a stack and a queue using arrays or linked lists.
@@ -387,6 +405,7 @@ Trees:
 Binary Trees and Binary Search Trees (BST).
 Implement tree traversals (In-order, Pre-order, Post-order).
 Solve problems like finding the height of a tree or checking if a tree is balanced.
+
 8. JavaScript DOM and Event Handling
 DOM Manipulation:
 Access and manipulate DOM elements (e.g., using querySelector, getElementById, and classList).
@@ -395,6 +414,7 @@ Use event listeners, event delegation, and prevent default behaviors.
 Understand the event propagation model (bubbling and capturing).
 Debouncing and Throttling:
 Implement debouncing and throttling for handling frequent events like scrolling or keypresses.
+
 9. System Design and Scalability (Basic Level)
 Design a URL Shortener:
 Design a simple URL shortener system.
@@ -402,6 +422,7 @@ Design a Chat Application:
 Implement basic design for a real-time chat system.
 Design an API:
 Design RESTful APIs with basic principles of scaling and maintaining state.
+
 10. Miscellaneous JavaScript Topics
 ES6 Features:
 Destructuring, spread/rest operators, template literals, default parameters, and modules.
@@ -411,11 +432,13 @@ Event Delegation:
 Efficient handling of events, especially when dealing with dynamically generated content.
 Debouncing/Throttling:
 Techniques to limit the frequency of function calls in certain situations, like scrolling or input events.
+
 11. Debugging and Error Handling
 Using Browser Developer Tools:
 Inspect elements, debug JavaScript, check network requests, and use breakpoints.
 Error Handling:
 Proper error handling using try-catch blocks and understanding custom error objects.
+
 12. Git & Version Control (for JavaScript projects)
 Git Commands:
 Mastery of common Git commands like git clone, git branch, git commit, git merge, git rebase.
